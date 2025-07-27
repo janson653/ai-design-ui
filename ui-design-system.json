@@ -1,0 +1,345 @@
+{
+  "designSystem": {
+    "name": "Geek Style Mobile UI Design System",
+    "version": "1.0.0",
+    "description": "极客风格移动端UI设计系统，专注于简洁、高效和技术感",
+    
+    "colorSystem": {
+      "primary": {
+        "50": "#0a0a0a",
+        "100": "#1a1a1a", 
+        "200": "#2a2a2a",
+        "300": "#3a3a3a",
+        "400": "#4a4a4a",
+        "500": "#5a5a5a",
+        "600": "#6a6a6a",
+        "700": "#7a7a7a",
+        "800": "#8a8a8a",
+        "900": "#9a9a9a"
+      },
+      "accent": {
+        "neonGreen": "#00ff41",
+        "matrixGreen": "#00ff00",
+        "cyanBlue": "#00ffff",
+        "electricBlue": "#0080ff",
+        "warningOrange": "#ff8000",
+        "errorRed": "#ff0040"
+      },
+      "background": {
+        "primary": "#000000",
+        "secondary": "#0d1117",
+        "tertiary": "#161b22",
+        "card": "#21262d",
+        "overlay": "rgba(0, 0, 0, 0.8)"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "#c9d1d9",
+        "tertiary": "#8b949e",
+        "muted": "#6e7681",
+        "accent": "#00ff41"
+      },
+      "border": {
+        "primary": "#30363d",
+        "secondary": "#21262d",
+        "accent": "#00ff41",
+        "focus": "#0080ff"
+      }
+    },
+
+    "typography": {
+      "fontFamily": {
+        "primary": "'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace",
+        "secondary": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        "display": "'Orbitron', 'Exo 2', sans-serif"
+      },
+      "fontSize": {
+        "xs": "12px",
+        "sm": "14px", 
+        "base": "16px",
+        "lg": "18px",
+        "xl": "20px",
+        "2xl": "24px",
+        "3xl": "30px",
+        "4xl": "36px"
+      },
+      "fontWeight": {
+        "light": 300,
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "lineHeight": {
+        "tight": 1.2,
+        "normal": 1.5,
+        "relaxed": 1.75
+      }
+    },
+
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "48px",
+      "3xl": "64px"
+    },
+
+    "borderRadius": {
+      "none": "0px",
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "full": "9999px"
+    },
+
+    "shadows": {
+      "sm": "0 1px 2px rgba(0, 255, 65, 0.1)",
+      "md": "0 4px 6px rgba(0, 255, 65, 0.15)",
+      "lg": "0 10px 15px rgba(0, 255, 65, 0.2)",
+      "glow": "0 0 20px rgba(0, 255, 65, 0.3)",
+      "neon": "0 0 30px rgba(0, 255, 65, 0.5)"
+    },
+
+    "components": {
+      "navigationBar": {
+        "height": "56px",
+        "backgroundColor": "#0d1117",
+        "borderBottom": "1px solid #30363d",
+        "title": {
+          "fontSize": "18px",
+          "fontWeight": 600,
+          "color": "#ffffff",
+          "fontFamily": "'Orbitron', sans-serif"
+        },
+        "backButton": {
+          "size": "24px",
+          "color": "#00ff41"
+        }
+      },
+
+      "tabBar": {
+        "height": "60px",
+        "backgroundColor": "#161b22",
+        "borderTop": "1px solid #30363d",
+        "items": {
+          "active": {
+            "color": "#00ff41",
+            "backgroundColor": "rgba(0, 255, 65, 0.1)"
+          },
+          "inactive": {
+            "color": "#8b949e"
+          }
+        }
+      },
+
+      "card": {
+        "backgroundColor": "#21262d",
+        "borderRadius": "12px",
+        "border": "1px solid #30363d",
+        "padding": "16px",
+        "shadow": "0 4px 6px rgba(0, 255, 65, 0.1)",
+        "hover": {
+          "borderColor": "#00ff41",
+          "shadow": "0 0 20px rgba(0, 255, 65, 0.2)"
+        }
+      },
+
+      "button": {
+        "primary": {
+          "backgroundColor": "#00ff41",
+          "color": "#000000",
+          "borderRadius": "8px",
+          "padding": "12px 24px",
+          "fontSize": "16px",
+          "fontWeight": 600,
+          "fontFamily": "'JetBrains Mono', monospace",
+          "hover": {
+            "backgroundColor": "#00cc33",
+            "boxShadow": "0 0 15px rgba(0, 255, 65, 0.4)"
+          }
+        },
+        "secondary": {
+          "backgroundColor": "transparent",
+          "color": "#00ff41",
+          "border": "1px solid #00ff41",
+          "borderRadius": "8px",
+          "padding": "12px 24px",
+          "fontSize": "16px",
+          "fontWeight": 600,
+          "hover": {
+            "backgroundColor": "rgba(0, 255, 65, 0.1)"
+          }
+        },
+        "ghost": {
+          "backgroundColor": "transparent",
+          "color": "#c9d1d9",
+          "border": "1px solid #30363d",
+          "borderRadius": "8px",
+          "padding": "12px 24px",
+          "hover": {
+            "borderColor": "#00ff41",
+            "color": "#00ff41"
+          }
+        }
+      },
+
+      "input": {
+        "backgroundColor": "#0d1117",
+        "border": "1px solid #30363d",
+        "borderRadius": "8px",
+        "padding": "12px 16px",
+        "fontSize": "16px",
+        "color": "#ffffff",
+        "fontFamily": "'JetBrains Mono', monospace",
+        "placeholder": {
+          "color": "#6e7681"
+        },
+        "focus": {
+          "borderColor": "#00ff41",
+          "boxShadow": "0 0 10px rgba(0, 255, 65, 0.3)"
+        }
+      },
+
+      "avatar": {
+        "sizes": {
+          "sm": "32px",
+          "md": "48px",
+          "lg": "64px",
+          "xl": "96px"
+        },
+        "borderRadius": "50%",
+        "border": "2px solid #00ff41",
+        "boxShadow": "0 0 10px rgba(0, 255, 65, 0.3)"
+      },
+
+      "badge": {
+        "backgroundColor": "#00ff41",
+        "color": "#000000",
+        "borderRadius": "12px",
+        "padding": "4px 8px",
+        "fontSize": "12px",
+        "fontWeight": 600,
+        "fontFamily": "'JetBrains Mono', monospace"
+      },
+
+      "progressBar": {
+        "backgroundColor": "#30363d",
+        "height": "4px",
+        "borderRadius": "2px",
+        "fill": {
+          "backgroundColor": "#00ff41",
+          "boxShadow": "0 0 10px rgba(0, 255, 65, 0.5)"
+        }
+      },
+
+      "switch": {
+        "width": "48px",
+        "height": "24px",
+        "backgroundColor": "#30363d",
+        "borderRadius": "12px",
+        "active": {
+          "backgroundColor": "#00ff41"
+        },
+        "thumb": {
+          "size": "20px",
+          "backgroundColor": "#ffffff",
+          "borderRadius": "50%"
+        }
+      }
+    },
+
+    "animations": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms"
+      },
+      "easing": {
+        "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+        "easeOut": "cubic-bezier(0, 0, 0.2, 1)",
+        "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "effects": {
+        "fadeIn": {
+          "from": { "opacity": 0 },
+          "to": { "opacity": 1 }
+        },
+        "slideUp": {
+          "from": { "transform": "translateY(20px)", "opacity": 0 },
+          "to": { "transform": "translateY(0)", "opacity": 1 }
+        },
+        "glow": {
+          "from": { "boxShadow": "0 0 5px rgba(0, 255, 65, 0.3)" },
+          "to": { "boxShadow": "0 0 20px rgba(0, 255, 65, 0.6)" }
+        }
+      }
+    },
+
+    "layout": {
+      "container": {
+        "maxWidth": "375px",
+        "padding": "16px",
+        "margin": "0 auto"
+      },
+      "grid": {
+        "columns": 12,
+        "gap": "16px"
+      },
+      "breakpoints": {
+        "mobile": "375px",
+        "tablet": "768px",
+        "desktop": "1024px"
+      }
+    },
+
+    "icons": {
+      "style": "outline",
+      "strokeWidth": "1.5px",
+      "sizes": {
+        "sm": "16px",
+        "md": "20px",
+        "lg": "24px",
+        "xl": "32px"
+      },
+      "colors": {
+        "primary": "#00ff41",
+        "secondary": "#c9d1d9",
+        "muted": "#6e7681"
+      }
+    },
+
+    "accessibility": {
+      "focusRing": {
+        "color": "#00ff41",
+        "width": "2px",
+        "style": "solid",
+        "offset": "2px"
+      },
+      "contrast": {
+        "minimum": "4.5:1",
+        "enhanced": "7:1"
+      }
+    },
+
+    "themes": {
+      "dark": {
+        "name": "Geek Dark",
+        "primary": true
+      },
+      "matrix": {
+        "name": "Matrix Green",
+        "accent": "#00ff00",
+        "background": "#001100"
+      },
+      "cyber": {
+        "name": "Cyberpunk",
+        "accent": "#ff0080",
+        "background": "#0a0a0a"
+      }
+    }
+  }
+}
