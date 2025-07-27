@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康饮食记录 - 首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4CAF50',
+                        'primary-dark': '#45a049',
+                        'primary-light': '#81C784'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- 状态栏 -->
+    <div class="bg-white px-4 py-2 flex justify-between items-center text-sm font-medium">
+        <span>9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal text-xs"></i>
+            <i class="fas fa-wifi text-xs"></i>
+            <i class="fas fa-battery-three-quarters text-xs"></i>
+        </div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="max-w-sm mx-auto bg-white min-h-screen">
+        <!-- 头部 -->
+        <header class="bg-gradient-to-r from-primary to-primary-light text-white px-6 py-8">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-leaf text-3xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold mb-2">健康饮食记录</h1>
+                <p class="text-green-100">让每一餐都更健康</p>
+            </div>
+        </header>
+
+        <!-- 快速统计 -->
+        <div class="px-6 py-4 bg-white">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">1,245</div>
+                    <div class="text-xs text-gray-500">今日卡路里</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">7</div>
+                    <div class="text-xs text-gray-500">连续打卡</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">85%</div>
+                    <div class="text-xs text-gray-500">目标完成</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能导航 -->
+        <div class="px-6 py-6">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">功能导航</h2>
+            <div class="space-y-4">
+                <!-- 今日膳食 -->
+                <a href="diet.html" class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-utensils text-primary text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">今日膳食</h3>
+                            <p class="text-sm text-gray-500">记录和管理每日饮食</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- 食谱库 -->
+                <a href="recipes.html" class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-book-open text-orange-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">食谱库</h3>
+                            <p class="text-sm text-gray-500">发现健康美味食谱</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- 数据统计 -->
+                <a href="stats.html" class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-blue-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">数据统计</h3>
+                            <p class="text-sm text-gray-500">查看营养摄入分析</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- 个人资料 -->
+                <a href="profile.html" class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">个人资料</h3>
+                            <p class="text-sm text-gray-500">管理个人信息设置</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 今日推荐 -->
+        <div class="px-6 py-4">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">今日推荐</h2>
+            <div class="bg-gradient-to-r from-primary to-primary-light rounded-2xl p-4 text-white">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=80&h=80&fit=crop&crop=center" 
+                         alt="健康餐" class="w-16 h-16 rounded-xl object-cover mr-4">
+                    <div class="flex-1">
+                        <h3 class="font-semibold mb-1">蔬菜沙拉配鸡胸肉</h3>
+                        <p class="text-sm text-green-100">低卡高蛋白，营养均衡</p>
+                        <div class="flex items-center mt-2">
+                            <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full mr-2">320 卡路里</span>
+                            <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">25g 蛋白质</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部间距 -->
+        <div class="h-8"></div>
+    </div>
+</body>
+</html>
