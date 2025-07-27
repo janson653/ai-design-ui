@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康饮食记录 - 首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4CAF50',
+                        'primary-dark': '#45a049',
+                        'primary-light': '#81C784'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- 状态栏 -->
+    <div class="bg-white px-4 py-2 flex justify-between items-center text-sm font-medium">
+        <span>9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal text-xs"></i>
+            <i class="fas fa-wifi text-xs"></i>
+            <i class="fas fa-battery-three-quarters text-xs"></i>
+        </div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="max-w-sm mx-auto bg-white min-h-screen">
+        <!-- 头部 -->
+        <header class="bg-gradient-to-r from-primary to-primary-light text-white px-6 py-8">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face"
+                        alt="用户头像"
+                        class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-white border-opacity-30">
+                    <div>
+                        <h2 class="text-lg font-bold">早上好，张健康！</h2>
+                        <p class="text-green-100 text-sm">今天也要健康饮食哦 💪</p>
+                    </div>
+                </div>
+                <button
+                    class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                    <i class="fas fa-bell text-white"></i>
+                </button>
+            </div>
+
+            <!-- 每日激励 -->
+            <div class="bg-white bg-opacity-15 rounded-2xl p-4 mb-4">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-quote-left text-white text-sm"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-white font-medium text-sm">"每一次健康的选择，都是对未来更好自己的投资"</p>
+                        <p class="text-green-100 text-xs mt-1">坚持第28天 🔥</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 快速统计 -->
+        <div class="px-6 py-4 bg-white">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">1,245</div>
+                    <div class="text-xs text-gray-500">今日卡路里</div>
+                    <div class="w-full bg-gray-200 rounded-full h-1 mt-2">
+                        <div class="bg-primary h-1 rounded-full" style="width: 62%"></div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-primary flex items-center justify-center">
+                        28 <i class="fas fa-fire text-orange-500 text-sm ml-1"></i>
+                    </div>
+                    <div class="text-xs text-gray-500">连续打卡</div>
+                    <div class="text-xs text-orange-500 font-medium mt-1">新纪录！</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">85%</div>
+                    <div class="text-xs text-gray-500">目标完成</div>
+                    <div class="w-full bg-gray-200 rounded-full h-1 mt-2">
+                        <div class="bg-primary h-1 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 成就徽章 -->
+        <div class="px-6 py-4 bg-gray-50">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-sm font-semibold text-gray-800">最新成就</h3>
+                <span class="text-xs text-primary">查看全部</span>
+            </div>
+            <div class="flex space-x-3">
+                <div class="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex-1">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-2">
+                            <i class="fas fa-trophy text-yellow-500 text-sm"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-medium text-gray-800">28天坚持</div>
+                            <div class="text-xs text-gray-500">刚刚获得</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex-1">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-2">
+                            <i class="fas fa-leaf text-primary text-sm"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-medium text-gray-800">健康达人</div>
+                            <div class="text-xs text-gray-500">3天前</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能导航 -->
+        <div class="px-6 py-6">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">功能导航</h2>
+            <div class="space-y-4">
+                <!-- 今日膳食 -->
+                <a href="diet.html"
+                    class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-utensils text-primary text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">今日膳食</h3>
+                            <p class="text-sm text-gray-500">记录和管理每日饮食</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- 食谱库 -->
+                <a href="recipes.html"
+                    class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-book-open text-orange-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">食谱库</h3>
+                            <p class="text-sm text-gray-500">发现健康美味食谱</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- 数据统计 -->
+                <a href="stats.html"
+                    class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-blue-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">数据统计</h3>
+                            <p class="text-sm text-gray-500">查看营养摄入分析</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- 个人资料 -->
+                <a href="profile.html"
+                    class="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 hover:scale-105">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800">个人资料</h3>
+                            <p class="text-sm text-gray-500">管理个人信息设置</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 今日推荐 -->
+        <div class="px-6 py-4">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">今日推荐</h2>
+            <div class="bg-gradient-to-r from-primary to-primary-light rounded-2xl p-4 text-white">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=80&h=80&fit=crop&crop=center"
+                        alt="健康餐" class="w-16 h-16 rounded-xl object-cover mr-4">
+                    <div class="flex-1">
+                        <h3 class="font-semibold mb-1">蔬菜沙拉配鸡胸肉</h3>
+                        <p class="text-sm text-green-100">低卡高蛋白，营养均衡</p>
+                        <div class="flex items-center mt-2">
+                            <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full mr-2">320 卡路里</span>
+                            <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">25g 蛋白质</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 激励挑战 -->
+        <div class="px-6 py-4">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">本周挑战</h2>
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-target text-purple-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">蛋白质达标挑战</h3>
+                            <p class="text-sm text-gray-500">连续7天达到蛋白质目标</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-lg font-bold text-purple-500">5/7</div>
+                        <div class="text-xs text-gray-500">天</div>
+                    </div>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 71%"></div>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                    <span class="text-gray-500">还差2天就完成了！</span>
+                    <span class="text-purple-500 font-medium">+50积分</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 朋友动态 -->
+        <div class="px-6 py-4">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-semibold text-gray-800">朋友动态</h2>
+                <span class="text-xs text-primary">查看更多</span>
+            </div>
+            <div class="space-y-3">
+                <div class="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face"
+                            alt="朋友头像" class="w-8 h-8 rounded-full object-cover mr-3">
+                        <div class="flex-1">
+                            <p class="text-sm text-gray-800"><span class="font-medium">小美</span> 完成了今日运动目标</p>
+                            <p class="text-xs text-gray-500">2小时前</p>
+                        </div>
+                        <button class="text-red-500 hover:text-red-600 transition-colors">
+                            <i class="fas fa-heart text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
+                            alt="朋友头像" class="w-8 h-8 rounded-full object-cover mr-3">
+                        <div class="flex-1">
+                            <p class="text-sm text-gray-800"><span class="font-medium">阿强</span> 连续打卡30天了！</p>
+                            <p class="text-xs text-gray-500">5小时前</p>
+                        </div>
+                        <button class="text-red-500 hover:text-red-600 transition-colors">
+                            <i class="fas fa-heart text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 每日提醒 -->
+        <div class="px-6 py-4">
+            <div class="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-lightbulb text-blue-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-blue-800 mb-1">健康小贴士</h3>
+                        <p class="text-sm text-blue-600">记得多喝水哦！建议每天至少8杯水，有助于新陈代谢。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部间距 -->
+        <div class="h-8"></div>
+    </div>
+</body>
+
+</html>
