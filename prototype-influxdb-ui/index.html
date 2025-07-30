@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfluxDB UI - Database Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-header">
+                <h2>数据库工具</h2>
+                <div class="search-container">
+                    <input type="text" placeholder="Search database objects..." class="search-input">
+                </div>
+            </div>
+            
+            <div class="connections-list">
+                <div class="connection-item">
+                    <div class="connection-header">
+                        <span class="connection-status connected"></span>
+                        <span class="connection-name">InfluxDB连接1</span>
+                    </div>
+                    <div class="databases-list">
+                        <div class="database-item">
+                            <span class="database-name">production_db</span>
+                        </div>
+                        <div class="database-item expanded">
+                            <span class="database-name">customer_data</span>
+                            <div class="tables-list">
+                                <div class="table-item">customers</div>
+                                <div class="table-item">orders</div>
+                                <div class="table-item">products</div>
+                            </div>
+                        </div>
+                        <div class="database-item">
+                            <span class="database-name">Sales_summary</span>
+                        </div>
+                        <div class="database-item">
+                            <span class="database-name">analytics_db</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connection-item">
+                    <div class="connection-header">
+                        <span class="connection-status connected"></span>
+                        <span class="connection-name">InfluxDB连接2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Top Panel -->
+            <div class="top-panel">
+                <div class="toolbar">
+                    <button class="btn btn-primary">新建连接</button>
+                    <button class="btn btn-secondary">保存</button>
+                    <button class="btn btn-success">运行 SQL</button>
+                </div>
+                
+                <div class="query-tabs">
+                    <div class="tab active">查询 1</div>
+                    <div class="tab">查询 2</div>
+                </div>
+                
+                <div class="query-editor">
+                    <textarea class="sql-editor" readonly>SELECT * FROM customers
+WHERE city = '北京'
+AND created_at = '2023-01-01'
+ORDER BY last_order_date DESC;
+
+SELECT COUNT(*) AS total_customers
+FROM customers WHERE city = '北京';</textarea>
+                </div>
+            </div>
+
+            <!-- Bottom Panel -->
+            <div class="bottom-panel">
+                <div class="result-tabs">
+                    <div class="tab active">结果</div>
+                    <div class="tab">消息</div>
+                    <div class="tab">统计信息</div>
+                </div>
+                
+                <div class="results-container">
+                    <div class="results-header">
+                        <span class="results-info">结果 (5 条记录, 执行时间: 0.012 秒)</span>
+                        <div class="action-buttons">
+                            <button class="btn btn-small">导出 CSV</button>
+                            <button class="btn btn-small">刷新</button>
+                        </div>
+                    </div>
+                    
+                    <div class="results-table-container">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>姓名</th>
+                                    <th>城市</th>
+                                    <th>电话</th>
+                                    <th>邮箱</th>
+                                    <th>注册日期</th>
+                                    <th>最近订单日期</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1001</td>
+                                    <td>张明</td>
+                                    <td>北京</td>
+                                    <td>138****5678</td>
+                                    <td>zhang@example.com</td>
+                                    <td>2022-12-12</td>
+                                    <td>2023-11-05</td>
+                                </tr>
+                                <tr>
+                                    <td>1002</td>
+                                    <td>李华</td>
+                                    <td>北京</td>
+                                    <td>139****1234</td>
+                                    <td>li@example.com</td>
+                                    <td>2023-01-23</td>
+                                    <td>2023-10-18</td>
+                                </tr>
+                                <tr>
+                                    <td>1003</td>
+                                    <td>王芳</td>
+                                    <td>北京</td>
+                                    <td>136****2345</td>
+                                    <td>wang@example.com</td>
+                                    <td>2023-02-15</td>
+                                    <td>2023-09-22</td>
+                                </tr>
+                                <tr>
+                                    <td>1004</td>
+                                    <td>赵伟</td>
+                                    <td>北京</td>
+                                    <td>135****6789</td>
+                                    <td>zhao@example.com</td>
+                                    <td>2023-03-08</td>
+                                    <td>2023-08-17</td>
+                                </tr>
+                                <tr>
+                                    <td>1005</td>
+                                    <td>刘强</td>
+                                    <td>北京</td>
+                                    <td>137****3456</td>
+                                    <td>liu@example.com</td>
+                                    <td>2023-04-19</td>
+                                    <td>2023-07-30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="table-properties">
+                <h3>customers表</h3>
+                
+                <div class="property-section">
+                    <h4>列名</h4>
+                    <div class="columns-list">
+                        <div class="column-item">
+                            <span class="column-name">id</span>
+                            <span class="column-type">INT</span>
+                        </div>
+                        <div class="column-item">
+                            <span class="column-name">name</span>
+                            <span class="column-type">VARCHAR(50)</span>
+                        </div>
+                        <div class="column-item">
+                            <span class="column-name">city</span>
+                            <span class="column-type">VARCHAR(50)</span>
+                        </div>
+                        <div class="column-item">
+                            <span class="column-name">phone</span>
+                            <span class="column-type">VARCHAR(20)</span>
+                        </div>
+                        <div class="column-item">
+                            <span class="column-name">email</span>
+                            <span class="column-type">VARCHAR(100)</span>
+                        </div>
+                        <div class="column-item">
+                            <span class="column-name">created_at</span>
+                            <span class="column-type">DATETIME</span>
+                        </div>
+                        <div class="column-item">
+                            <span class="column-name">last_order_date</span>
+                            <span class="column-type">DATETIME</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="property-section">
+                    <h4>索引</h4>
+                    <div class="index-item primary">
+                        <span class="index-name">PRIMARY (主键)</span>
+                        <span class="index-columns">id</span>
+                    </div>
+                    <div class="index-item">
+                        <span class="index-name">idx_city</span>
+                        <span class="index-columns">city</span>
+                    </div>
+                    <div class="index-item">
+                        <span class="index-name">idx_name</span>
+                        <span class="index-columns">name</span>
+                    </div>
+                </div>
+                
+                <div class="property-section">
+                    <h4>统计信息</h4>
+                    <div class="stats-list">
+                        <div class="stat-item">
+                            <span class="stat-label">总记录数</span>
+                            <span class="stat-value">10,247</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">数据大小</span>
+                            <span class="stat-value">2.4 MB</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">索引大小</span>
+                            <span class="stat-value">0.8 MB</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">最后更新</span>
+                            <span class="stat-value">2023-11-15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
